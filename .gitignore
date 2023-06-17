@@ -1,5 +1,6 @@
 build/
 .vscode/
+.vs/
 *.gba
 *.elfbin
 *.elf
@@ -11,3 +12,6 @@ build/
 *.config
 *.cflags
 *.cxxflags
+*.sln
+*.vcxproj
+*.vcxproj.filters
