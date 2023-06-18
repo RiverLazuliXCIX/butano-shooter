@@ -19,14 +19,14 @@ namespace bs
     {
     }
 
-    bn::sprite_ptr reticle::draw()
-    {
-        return bn::sprite_items::reticle_sprite.create_sprite(0, 0);
-    }
-
     void reticle::update()
     {
         movement();
+    }
+
+    bn::sprite_ptr reticle::draw()
+    {
+        return bn::sprite_items::reticle_sprite.create_sprite(0, 0);
     }
 
     void reticle::movement()
