@@ -7,16 +7,17 @@ namespace bs
 {
     class reticle
     {
+    public:
+        reticle();
+        
+        void update();
+
     private:
         bn::sprite_ptr _sprite;
 
         bn::sprite_ptr draw();
         void movement();
         void wrap_around_screen();
-
-    public:
-        reticle();
-        void update();
     };
 }
 #endif
