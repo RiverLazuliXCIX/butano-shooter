@@ -23,9 +23,14 @@ namespace bs
             _enemy_list.emplace_front(enemy);
         }
 
-        for (bs::enemy enemy : _enemy_list)
+        for (auto& enemy : _enemy_list)
         {
             enemy.update();
+            
+            if (!enemy.is_alive())
+            {
+                _enemy_list.remove(enemy);
+            }
         }
     }
 }
