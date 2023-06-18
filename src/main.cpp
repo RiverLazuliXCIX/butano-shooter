@@ -5,7 +5,6 @@
 
 #include "bn_core.h"
 #include "bn_regular_bg_ptr.h"
-#include "bn_regular_bg_item.h"
 
 int main()
 {

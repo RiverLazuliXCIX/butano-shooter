@@ -4,7 +4,7 @@
 #include "bs_enemy.h"
 #include "bs_constants.h"
 
-#include "bn_list.h"
+#include "bn_vector.h"
 
 namespace bs
 {
@@ -15,7 +15,7 @@ namespace bs
         void update();
 
     private:
-        bn::list<enemy, constants::max_enemies> _enemy_list;
+        bn::vector<enemy, constants::max_enemies> _enemy_list;
     };
 }
 

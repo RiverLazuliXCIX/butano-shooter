@@ -20,16 +20,16 @@ namespace bs
             auto random_ttl = random_number.get_int(constants::max_enemy_time_to_live);
 
             bs::enemy enemy = bs::enemy(bn::fixed_point(random_x, random_y), random_tta, random_ttl);
-            _enemy_list.emplace_front(enemy);
+            _enemy_list.emplace_back(enemy);
         }
 
-        for (auto& enemy : _enemy_list)
+        for (int i = 0; i < _enemy_list.size(); i++)
         {
-            enemy.update();
-            
-            if (!enemy.is_alive())
+            _enemy_list[i].update();
+
+            if (!_enemy_list[i].is_alive())
             {
-                _enemy_list.remove(enemy);
+                _enemy_list.erase(_enemy_list.begin() + i);
             }
         }
     }
